@@ -2,13 +2,15 @@
 
 # Contents
 
-- [0.0 Foreword](##0-0-foreword)
+- [0.0 Foreword](#0-0-foreword)
 
-- [1.0 Bootstrap Glossary](##1-0-bootstrap-glossary)
+- [1.0 Bootstrap Glossary](#1-0-bootstrap-glossary)
 
-    - [1.1 The Sidebar](###1-1-sidebar)
+    - [1.1 The Sidebar](#1-1-sidebar)
 
-    - [1.2 Cards](###1-2-cards)
+    - [1.2 Cards](#1-2-cards)
+
+- [2.0 Feather](#2-0-feather)
 
 ---
 
@@ -24,11 +26,14 @@ from the scorched Earth rises a pheonix, and pheonixes are cool.
 
 ## 1.0 Bootstrap Glossary
 ### 1.1 Sidebar
-  * `css:d-flex` *display* flex
-  * `css:p-*n*` *padding* amount
-  * `css:`
+  * `d-flex` *display* flex
+  * `p-*n*` *padding* amount
+  * `mb-3` *margin-bottom* amount
+  * `mb-md-0` *margin-begin* *medium* amount (left-most margin)
+  * `me-md-0` *margin-end* *medium* amount (right-most margin)
 ### 1.2 Cards
   * yadda yadda
 
-
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+## 2.0 Feather
+Feather is a library of svg icons that is pretty sick. It can be loaded via CDN which is observed on line 9 of index.html. 
+The project is open source and available on GitHub [here](https://github.com/feathericons/feather). 
