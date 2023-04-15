@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 * {
+    /* Fix "vh" behavior in Chrome */
+    /* https://stackoverflow.com/questions/40119851/why-wont-vh-work-in-chrome-but-it-works-in-internet-explorer */
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    min-height: 100vh;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
+}
+
+nav {
+    display: flex;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
 }

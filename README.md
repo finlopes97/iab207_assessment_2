@@ -10,7 +10,7 @@
 
     - [1.2 Cards](#1-2-cards)
 
-- [2.0 Feather](#2-0-feather)
+- [2.0 HTML](#2-0-html)
 
 ---
 
@@ -25,15 +25,27 @@ descent into madness as yet another QUT assessment destroys all fifteen of my br
 from the scorched Earth rises a pheonix, and pheonixes are cool.
 
 ## 1.0 Bootstrap Glossary
-### 1.1 Sidebar
-  * `d-flex` *display* flex
-  * `p-*n*` *padding* amount
-  * `mb-3` *margin-bottom* amount
-  * `mb-md-0` *margin-begin* *medium* amount (left-most margin)
-  * `me-md-0` *margin-end* *medium* amount (right-most margin)
-### 1.2 Cards
-  * yadda yadda
+  * `d-flex` *display-flex*
+  * `p-3` *padding* {padding}-{size}
+  * `mb-3` *margin-bottom* {property}{sides}-{size}
+  * `ms-md-0` *margin-start* {property}{sides}-{breakpoint}-{size}
+  * `ms-3` *margin-start* {property}{sides}-{size}
+  * `me-md-0` *margin-end* {property}{sides}-{breakpoint}-{size}
+  * 'me-3` *margin-end* {property}{sides}-{size}
+  * `fs-3` *font-size* {property}-{size}
+  * `fw-normal` *font-weight* {property}-{weight}
+  * `mx-auto` *margin-left && margin-right* {property}{sides}-{size}
+  * `my-auto` *margin-top && margin-bottom* {property}{sides}-{size}
 
-## 2.0 Feather
-Feather is a library of svg icons that is pretty sick. It can be loaded via CDN which is observed on line 9 of index.html. 
-The project is open source and available on GitHub [here](https://github.com/feathericons/feather). 
+## 2.0 HTML
+### 2.1 Sidebar
+This took a while to get right, I forced myself to try and make it work with Bootstrap
+which led to some severe brain hemorrhaging. I mocked it up in plain CSS to get an idea
+of what I wanted, which made me question why I was even using Bootstrap as I spent
+hours shedding brain cells to get my sidebar to fill the vertical space of the viewport
+which it sometimes did in Firefox but not Chrome, or vice versa, or neither at all. When
+it did work, the elements of the sidebar would not be fixed, and would grow and shrink with
+the size of the sidebar despite having grow and shrink values of zero. It ended up being
+the y-axis margins `my-n` which I changed from auto values to fixed values. 
+
+I then filled the sidebar with lots of primo content, real sick shit. 
