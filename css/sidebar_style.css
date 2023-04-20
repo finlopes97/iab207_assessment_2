@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Break em off a lil preview of the remix */
+:root {
+    --dark: #191919;
+    --grey: #CED0CE;
+    --accent-orange: #F15025;
+    --off-white: #f9f9f9;
+    --transition-speed: 600ms;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: var(--off-white);
+    background-color: var(--off-white);
+    margin: 0;
+    padding: 0;
+}
+
+/* A fuckable scrollbar */
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--accent-orange);
+}
+
+/* End of the setup */
+
+main {
+    margin-left: 280px;
+    padding: 1rem;
+}
+
+/* This here code is to put up a sidebar and whatnot */
+
+/* Base sidebar, paint it black */
+.sidebar {
+    position: fixed;
+    background-color: var(--dark);
+    overflow: scroll;
+    height: 100%;
+}
+
+/* Create the flex column for all the shitty items to sit inside */
+.sidebar-list {
+    list-style: none;
+    padding: 0rem 0.5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+/* Shitty items */
+.sidebar-list-item {
+    font-size: 36px;
+    margin: 1rem auto;
+    flex: 0;
+}
+
+.sidebar-item-text {
+    display: inline;
+}
+
+/* Fix the alignment of the svg icons, truly a fix of all time */
+/* Code bad, might change, if sanity recovers */
+.sidebar-list-item svg {
+    margin-bottom: 0.5rem;
+}
+
+/* Another dirty fix for image sizing */
+/* .sidebar-list-item img { */
+/*     max-width: 100%; */
+/* } */
+
+.sidebar-link {
+    text-decoration: none;
+}
+
+/* Links to other pages, we want some cute uwu fade into our accent colour */
+/* to highlight which one is selected by the user, also need some way for  */
+/* users who are using keyboard nav to be able to find their way around, */
+/* don't disable the outline even if it looks bad */
+
+/* Create a reusable class for making fades, like a barber in North Brisbane */
+.sidebar-item-fade {
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.sidebar-item-fade:hover {
+    filter: grayscale(0%) opacity(1);
+    color: var(--accent-orange);
+}
+
+/* .sidebar-item-fade:focus-visible { */
+/*     outline: 1px solid var(--accent-orange); */
+/* } */
+
+/* Now we want to make a searchbar so we can expedite the process of finding */
+/* what we need and getting the fuck off this website */
+.sidebar-item-search {
+    display: block;
+}
+
+.sidebar-item-search-bar {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--off-white);
+    background-color: var(--dark);
+    border: 2px solid var(--off-white);
+    padding: 0.75rem;
+}
+
+.sidebar-item-button {
+    background: none;
+    color: inherit;
+    margin-left: 0.25rem;
+    border: hidden;
+}
+
+/* Attempts to make a nicer focus mode have failed, will try again later  */
+
+/* Ensure that button border is visible when using keyboard navigation */
+/* .focus-only:focus { */
+/*     outline: none; */
+/*     border: none; */
+/* } */
+/* .focus-visible-only:focus-visible { */
+/*     outline: 2px solid var(--accent-orange); */
+/*     border: none; */
+/* } */
+
+/* Media queries to make this shit mobile friendly */
+@media only screen and (max-width: 700px) {
+    .sidebar {
+        bottom: 0;
+        width: 100vw;
+        height: 4rem;
+    }
+    .sidebar-list {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sidebar-item-search,
+    .sidebar-item-text {
+        display: none;
+    }
+    
+    .sidebar-list-item img {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* .mobile-search-bar { */
+    /* } */
+}
+
+/* For all the sicko freaks who use their phones in landscape mode */
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+    .sidebar-list-item {
+        margin: 0.5rem auto;
+        font-size: 24px;
+    }
+
+    .sidebar-list-item img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* For regular computer monitors and tablets. */
+@media only screen and (min-width: 900px) {
+    .sidebar-list-item img {
+        width: 128px;
+        height: 128px;
+    }
+}
