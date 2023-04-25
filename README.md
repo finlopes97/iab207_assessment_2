@@ -4,48 +4,95 @@
 
 - [0.0 Foreword](#0-0-foreword)
 
-- [1.0 Bootstrap Glossary](#1-0-bootstrap-glossary)
-
-    - [1.1 The Sidebar](#1-1-sidebar)
-
-    - [1.2 Cards](#1-2-cards)
-
-- [2.0 HTML](#2-0-html)
-
 ---
 
 ## 0.0 Foreword
-The primary purpose of this documentation is to provide a means of interpreting the various "helpful" Bootstrap abbreviations 
-used in their classes, such as "me-md-0." What does it mean? That is for god to know and us to find out. During my time 
-developing in this environment I have had to make ample use of the Bootstrap documentation and there is no possible way I 
-would be able to decipher the various classes and modifiers being used if I were to take even a five minute break from coding. 
-I also hope to document other things such that I don't need to leave comments on my code, because thorough documentation is 
-preferable than ugly code comments explaining every little thing. I also like to include a readme.txt that slowly records my 
-descent into madness as yet another QUT assessment destroys all fifteen of my brain cells. But this is a good thing, because 
-from the scorched Earth rises a pheonix, and pheonixes are cool.
-
-## 1.0 Bootstrap Glossary
-  * `d-flex` *display-flex*
-  * `p-3` *padding* {padding}-{size}
-  * `mb-3` *margin-bottom* {property}{sides}-{size}
-  * `ms-md-0` *margin-start* {property}{sides}-{breakpoint}-{size}
-  * `ms-3` *margin-start* {property}{sides}-{size}
-  * `me-md-0` *margin-end* {property}{sides}-{breakpoint}-{size}
-  * 'me-3` *margin-end* {property}{sides}-{size}
-  * `fs-3` *font-size* {property}-{size}
-  * `fw-normal` *font-weight* {property}-{weight}
-  * `mx-auto` *margin-left && margin-right* {property}{sides}-{size}
-  * `my-auto` *margin-top && margin-bottom* {property}{sides}-{size}
-
-## 2.0 HTML
-### 2.1 Sidebar
-This took a while to get right, I forced myself to try and make it work with Bootstrap
-which led to some severe brain hemorrhaging. I mocked it up in plain CSS to get an idea
-of what I wanted, which made me question why I was even using Bootstrap as I spent
-hours shedding brain cells to get my sidebar to fill the vertical space of the viewport
-which it sometimes did in Firefox but not Chrome, or vice versa, or neither at all. When
-it did work, the elements of the sidebar would not be fixed, and would grow and shrink with
-the size of the sidebar despite having grow and shrink values of zero. It ended up being
-the y-axis margins `my-n` which I changed from auto values to fixed values. 
-
-I then filled the sidebar with lots of primo content, real sick shit. 
+Yo, Big Shaq, the one and only
+Man's not hot, never hot
+Skrrat (GottiOnEm), skidi-kat-kat
+Boom
+Two plus two is four
+Minus one that's three, quick maths
+Everyday man's on the block
+Smoke trees (Ah)
+See your girl in the park
+That girl is a uckers
+When the ting went quack-quack-quack
+You man were ducking (You man ducked)
+Hold tight, Asznee (My brudda)
+He's got the pumpy (Big ting)
+Hold tight, my man (My guy)
+He's got the frisbee (Shew)
+I trap, trap, trap on the phone
+Movin' that cornflakes (Uh)
+Rice Krispies
+Hold tight, my girl Whitney (My G)
+On, on, on, on, on the road doin' ten toes
+Like my toes (Like my toes)
+You man thought I froze
+I see a peng girl, then I pose (Chilin')
+If she ain't on it, I ghost
+Hah, look at your nose (Check your nose, fam)
+You donut
+Nose long like garden hose
+I tell her man's not hot
+I tell her man's not hot
+The girl told me, "Take off your jacket"
+I said, "Babes, man's not hot" (Never hot)
+I tell her man's not hot (Never hot)
+I tell her man's not hot (Never hot)
+The girl told me, "Take off your jacket"
+I said, "Babes, man's not hot" (Never hot)
+Hop out the four-door with the .44
+It was one, two, three and four (Us, man)
+Chillin' in the corridor (Yo)
+Your dad is forty-four (Uh)
+And he's still callin' man for a draw (Look at him)
+Let him know
+When I see him
+I'm gonna spin his jaw (Finished)
+Take man's Twix by force (Take it)
+Send man's shop by force (Send him)
+Your girl knows I've got the sauce (Flexin')
+No ketchup (None)
+Just sauce (Saucy)
+Raw sauce
+Ah, yo, boom, ah
+The ting goes skrrrahh (Ah)
+Pap, pap, ka-ka-ka (Ka-ka)
+Skidiki-pap-pap (Pap)
+And a pu-pu-pudrrrr-boom (Boom)
+Skya (Ah)
+Du-du-ku-ku-dun-dun (Dun)
+Poom, poom
+You don' know
+I tell her man's not hot (Man's not)
+I tell her man's not hot (Never hot)
+The girl told me, "Take off your jacket"
+I said, "Babes, man's not hot" (Never hot)
+I tell her man's not hot
+I tell her man's not hot (Never hot)
+The girl told me, "Take off your jacket"
+I said, "Babes, man's not hot"
+Man can never be hot (Never hot)
+Perspiration ting (Spray dat)
+Lynx Effect (Come on)
+You didn't hear me, did you? (Nah)
+Use roll-on (Use that)
+Or spray (Shhh)
+But either way, A-B-C-D (Alphabet ting)
+The ting goes skrrrahh (Ah)
+Pap, pap, ka-ka-ka (Ka)
+Skidiki-pap-pap (Pap)
+And a pu-pu-pudrrrr-boom (Boom)
+Skya (Ah)
+Du-du-ku-ku-dun-dun (Dun)
+Poom, poom
+You don' know
+Big Shaq
+Man's not hot
+I tell her man's not hot (Never hot)
+40 degrees and man's not hot (Come on)
+Yo, in the sauna
+Man's not hot (Never hot)
+Yeah, skidika-pap-pap
