@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Break em off a lil preview of the remix */
+:root {
+    --dark: #191919;
+    --less-dark: #242423;
+    --grey: #CED0CE;
+    --accent-orange: #F15025;
+    --off-white: #f9f9f9;
+    --transition-speed: 600ms;
+}
+
+/* Setting up the page */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-color: var(--less-dark);
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark) var(--accent-orange);
+}
+
+/* A nicer scrollbar */
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--accent-orange);
+}
+
+/* Set up the main element of the page to accomodate sidebar in desktop view */
+main {
+    margin-left: 280px;
+    padding: 1rem;
+}
+
+/* Ensuring the title is visible on mobile, as the sidebar turns into a bottom navbar */
+.mobile-title {
+    display: none;
+}
+
+.zoom {
+    transform: scale(1);
+    transition: 300ms;
+}
+
+.zoom:hover {
+    transform: scale(1.02);
+    transition: 100ms;
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        margin-left: 0;
+        margin-bottom: 4rem;
+    }
+
+    .mobile-title {
+        display: block;
+        color: var(--off-white);
+    }
+
+    body {
+        scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar,
+    body::-webkit-scrollbar-track,
+    body::-webkit-scrollbar-thumb {
+        display: none;
+    }
+}
+

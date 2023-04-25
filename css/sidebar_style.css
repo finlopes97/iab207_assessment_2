@@ -1,52 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-/* Break em off a lil preview of the remix */
-:root {
-    --dark: #191919;
-    --grey: #CED0CE;
-    --accent-orange: #F15025;
-    --off-white: #f9f9f9;
-    --transition-speed: 600ms;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    color: var(--off-white);
-    background-color: var(--off-white);
-    margin: 0;
-    padding: 0;
-}
-
-/* A fuckable scrollbar */
-body::-webkit-scrollbar {
-    width: 0.25rem;
-}
-body::-webkit-scrollbar-track {
-    background: var(--dark);
-}
-body::-webkit-scrollbar-thumb {
-    background: var(--accent-orange);
-}
-
-/* End of the setup */
-
-main {
-    margin-left: 280px;
-    padding: 1rem;
-}
-
-/* This here code is to put up a sidebar and whatnot */
-
 /* Base sidebar, paint it black */
+/* --------------------------------------------------------------------------- */
 .sidebar {
     position: fixed;
     background-color: var(--dark);
-    overflow: scroll;
+    overflow: hidden;
+    color: var(--off-white);
+    width: 280px;
     height: 100%;
+    z-index: 5;
 }
 
-/* Create the flex column for all the shitty items to sit inside */
+/* Create the flex column for all the items to sit inside */
+/* --------------------------------------------------------------------------- */
 .sidebar-list {
     list-style: none;
     padding: 0rem 0.5rem;
@@ -57,10 +22,11 @@ main {
     height: 100%;
 }
 
-/* Shitty items */
+/* Aformentioned items */
+/* --------------------------------------------------------------------------- */
 .sidebar-list-item {
     font-size: 36px;
-    margin: 1rem auto;
+    margin: 2rem auto;
     flex: 0;
 }
 
@@ -68,29 +34,23 @@ main {
     display: inline;
 }
 
+/* Fixes galore */
+/* --------------------------------------------------------------------------- */
+
 /* Fix the alignment of the svg icons, truly a fix of all time */
-/* Code bad, might change, if sanity recovers */
 .sidebar-list-item svg {
     margin-bottom: 0.5rem;
 }
 
-/* Another dirty fix for image sizing */
-/* .sidebar-list-item img { */
-/*     max-width: 100%; */
-/* } */
-
+/* Make links look better */
 .sidebar-link {
     text-decoration: none;
 }
 
-/* Links to other pages, we want some cute uwu fade into our accent colour */
-/* to highlight which one is selected by the user, also need some way for  */
-/* users who are using keyboard nav to be able to find their way around, */
-/* don't disable the outline even if it looks bad */
-
 /* Create a reusable class for making fades, like a barber in North Brisbane */
+/* --------------------------------------------------------------------------- */
 .sidebar-item-fade {
-    filter: grayscale(100%) opacity(0.7);
+    filter: grayscale(100%) opacity(0.9);
     transition: var(--transition-speed);
 }
 
@@ -99,21 +59,17 @@ main {
     color: var(--accent-orange);
 }
 
-/* .sidebar-item-fade:focus-visible { */
-/*     outline: 1px solid var(--accent-orange); */
-/* } */
-
-/* Now we want to make a searchbar so we can expedite the process of finding */
-/* what we need and getting the fuck off this website */
+/* Search bar stuff */
+/* --------------------------------------------------------------------------- */
 .sidebar-item-search {
     display: block;
 }
 
 .sidebar-item-search-bar {
-    width: 10rem;
-    height: 2rem;
+    width: 12rem;
+    height: 3rem;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--off-white);
     background-color: var(--dark);
     border: 2px solid var(--off-white);
@@ -123,7 +79,7 @@ main {
 .sidebar-item-button {
     background: none;
     color: inherit;
-    margin-left: 0.25rem;
+    margin-left: 0.5rem;
     border: hidden;
 }
 
@@ -140,6 +96,7 @@ main {
 /* } */
 
 /* Media queries to make this shit mobile friendly */
+/* --------------------------------------------------------------------------- */
 @media only screen and (max-width: 700px) {
     .sidebar {
         bottom: 0;
@@ -150,19 +107,17 @@ main {
         flex-direction: row;
         align-items: center;
     }
-
     .sidebar-item-search,
     .sidebar-item-text {
         display: none;
     }
-    
-    .sidebar-list-item img {
-        width: 32px;
-        height: 32px;
+    .sidebar-item {
+        border: 0 auto;
     }
-
-    /* .mobile-search-bar { */
-    /* } */
+    .sidebar-list-item img {
+        width: 48px;
+        height: 48px;
+    }
 }
 
 /* For all the sicko freaks who use their phones in landscape mode */
@@ -171,7 +126,6 @@ main {
         margin: 0.5rem auto;
         font-size: 24px;
     }
-
     .sidebar-list-item img {
         width: 64px;
         height: 64px;
@@ -181,7 +135,7 @@ main {
 /* For regular computer monitors and tablets. */
 @media only screen and (min-width: 900px) {
     .sidebar-list-item img {
-        width: 128px;
-        height: 128px;
+        width: 192px;
+        height: 192px;
     }
 }

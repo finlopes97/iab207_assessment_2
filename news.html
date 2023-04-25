@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>News - Letterboxer</title>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/sidebar_style.css">
+        <link rel="stylesheet" href="css/news_feed.css">
+    </head>
+
+    <body>
+
+        <nav class="sidebar">
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="index.html">
+                        <i data-feather="film"></i>
+                        <span class="sidebar-item-text">Letterboxer</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="profile.html">
+                        <img class="rounded-circle mx-auto" alt="avatar" src="img/avatar.jpg">
+                    </a>
+                </li>
+                <li class="sidebar-list-item sidebar-item-search focus-only focus-visible-only">
+                    <form action="#" class="d-inline-flex flex-0 align-items-center">
+                        <input class="sidebar-item-search-bar" type="text" placeholder="Find showings..." name="search">
+                        <button class="sidebar-item-button sidebar-item-fade">
+                            <i data-feather="search"></i>
+                        </button>
+                    </form>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="browse.html">
+                        <i data-feather="tag"></i>
+                        <span class="sidebar-item-text">What's on</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="news.html">
+                        <i data-feather="paperclip"></i>
+                        <span class="sidebar-item-text">News</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <h1 class="display-1 text-dark">News</h1>
+                <ul class="news-feed">
+                    <li class="news-feed-item">
+                        <img src="img/pulp.jpg">
+                        <span class="p2">
+                            <h2>This is some noteworthy film news</h2>
+                            Movie goes to cinema wow
+                        </span>
+                    </li> 
+                    <li class="news-feed-item">
+                        <img src="img/pulp.jpg">
+                        <span class="p2">
+                            <h2>This is some noteworthy film news</h2>
+                            Movie goes to cinema wow
+                        </span>
+                    </li> 
+                    <li class="news-feed-item">
+                        <img src="img/pulp.jpg">
+                        <span class="p2">
+                            <h2>This is some noteworthy film news</h2>
+                            Movie goes to cinema wow
+                        </span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+    </body>
+</html>
+
+<script>
+    feather.replace();
+</script>

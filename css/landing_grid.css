@@ -1,0 +1,18 @@
+/* This is the css stylesheet for the main page's grid layout */
+
+.card-grid {
+    display: grid;
+    gap: min(90px, 5%);
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin: 1rem;
+    }
+}

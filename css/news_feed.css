@@ -1,0 +1,17 @@
+/* Create flexbox with vertical direction to accomodate news snippets */
+/* --------------------------------------------------------------------------- */
+.news-feed {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.news-feed-item {
+    display: flex;
+    flex: 0;
+    margin: 1rem;
+}
