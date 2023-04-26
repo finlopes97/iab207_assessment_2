@@ -15,6 +15,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     background-color: var(--less-dark);
+    color: var(--off-white);
     margin: 0;
     padding: 0;
     scrollbar-width: thin;
@@ -35,7 +36,7 @@ body::-webkit-scrollbar-thumb {
 /* Set up the main element of the page to accomodate sidebar in desktop view */
 main {
     margin-left: 280px;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /* Ensuring the title is visible on mobile, as the sidebar turns into a bottom navbar */
@@ -61,7 +62,7 @@ main {
 
     .mobile-title {
         display: block;
-        color: var(--off-white);
+        /* color: var(--off-white); */
     }
 
     body {

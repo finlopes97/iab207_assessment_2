@@ -18,7 +18,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     height: 100%;
 }
 
@@ -26,9 +26,10 @@
 /* --------------------------------------------------------------------------- */
 .sidebar-list-item {
     font-size: 36px;
-    margin: 2rem auto;
+    margin: 2rem 0 2rem 1rem;
     flex: 0;
 }
+
 
 .sidebar-item-text {
     display: inline;
@@ -107,12 +108,12 @@
         flex-direction: row;
         align-items: center;
     }
+    .sidebar-list-item {
+        margin: auto;
+    }
     .sidebar-item-search,
     .sidebar-item-text {
         display: none;
-    }
-    .sidebar-item {
-        border: 0 auto;
     }
     .sidebar-list-item img {
         width: 48px;
@@ -130,6 +131,9 @@
         width: 64px;
         height: 64px;
     }
+    .sidebar-item-centered {
+        margin: 2rem auto;
+    }
 }
 
 /* For regular computer monitors and tablets. */
@@ -137,5 +141,8 @@
     .sidebar-list-item img {
         width: 192px;
         height: 192px;
+    }
+    .sidebar-item-centered {
+        margin: 2rem auto;
     }
 }

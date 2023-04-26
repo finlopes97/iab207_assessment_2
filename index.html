@@ -15,13 +15,13 @@
 
         <nav class="sidebar">
             <ul class="sidebar-list">
-                <li class="sidebar-list-item focus-only focus-visible-only">
+                <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
                     <a class="sidebar-link sidebar-item-fade" href="index.html">
                         <i data-feather="film"></i>
                         <span class="sidebar-item-text">Letterboxer</span>
                     </a>
                 </li>
-                <li class="sidebar-list-item focus-only focus-visible-only">
+                <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
                     <a class="sidebar-link sidebar-item-fade" href="profile.html">
                         <img class="rounded-circle mx-auto" alt="avatar" src="img/avatar.jpg">
                     </a>
@@ -51,9 +51,12 @@
 
         <main>
 
-            <section class="mobile-title">
-                <h1 class="display-1 text-center text-uppercase">Home</h1>
-            </section>
+            <div class="mobile-title">
+                <span class="d-flex justify-content-center">
+                    <i data-feather="film" class="mb-1 me-2" style="width: 2.5rem; height: auto;"></i>
+                    <h1 class="display-1 text-uppercase">Home</h1>
+                </span>
+            </div>
 
             <section class="card-grid" id="cardContainer">
             </section>
@@ -64,13 +67,13 @@
 </html>
 
 <template id="cardTemplate">
-    <a href="#" class="d-flex flex-column card border-0 shadow-lg zoom text-decoration-none" style="width: auto;">
+    <a href="#" class="card border-0 shadow-lg zoom text-decoration-none" style="width: auto;">
         <img src="" class="card-img-top" alt="movie poster">
         <div class="card-body">
             <h5 class="card-title text-dark fw-bold"></h5>
             <h6 class="card-subtitle text-secondary"></h6>
             <p class="card-text text-dark mt-2"></p>
-            <span class="badge badge-light rounded-pill bg-dark mt-2"><span>
+            <span class="badge badge-light rounded-pill bg-dark mt-2"></span>
         </div>
     </a>
 </template>
