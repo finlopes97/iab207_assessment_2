@@ -6,13 +6,275 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>"Event Name" - Letterboxer</title>
         <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/sidebar_style.css">
-        <link rel="stylesheet" href="css/landing_grid.css">
+        <link rel="stylesheet" href="css/event_details.css">
     </head>
     <body>
-        <h1>This page allows users to see event details and leave reviews</h1>
+
+        <nav class="sidebar">
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="index.html">
+                        <i data-feather="film"></i>
+                        <span class="sidebar-item-text">Letterboxer</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="profile.html">
+                        <img class="rounded-circle mx-auto" alt="avatar" src="img/avatar_blank.jpg">
+                    </a>
+                </li>
+                <li class="sidebar-item-user-options sidebar-item-centered focus-only focus-visible-only">
+                    <span>
+                        <a class="sidebar-link sidebar-item-fade" href="profile.html">Log in</a>
+                        or
+                        <a class="sidebar-link sidebar-item-fade" href="profile.html">Sign up</a>
+                    </span>
+                </li>
+                <li class="sidebar-list-item sidebar-item-search focus-only focus-visible-only">
+                    <form class="d-inline-flex flex-0 align-items-center" action="browse.html" method="get">
+                        <input class="sidebar-item-search-bar" type="text" placeholder="Find showings..." name="searchTerm">
+                        <button class="sidebar-item-button sidebar-item-fade" type="submit">
+                            <i data-feather="search"></i>
+                        </button>
+                        <input type="hidden" name="redirect" value="true">
+                    </form>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="browse.html">
+                        <i data-feather="tag"></i>
+                        <span class="sidebar-item-text">What's on</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="news.html">
+                        <i data-feather="paperclip"></i>
+                        <span class="sidebar-item-text">News</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item sidebar-item-footer zoom">
+                    <a class="orange-button-no-border p-3 mx-auto" href="create_event.html">
+                        Create a showing
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <div class="ghost-button shadow-lg zoom">
+                <a class="orange-button-no-border p-1" href="create_event.html">
+                    Create a showing
+                </a>
+            </div>
+
+            <section>
+                <h1 class="display-2">Evil Dead II (EXAMPLE)</h1>
+                <h4 class="text-muted">Red Hill Cinemas</h3>
+
+                <hr />
+
+                <div class="d-flex flex-column">
+                    <div class="d-flex flex-column flex-lg-row my-2">
+                        <div class="me-4 p-3 border rounded border-light">
+                            <h3 class="fw-bolder mb-lg-2">About the movie</h5>
+                            <p class="fs-4 mb-lg-2">
+                            The second of three films in the Evil Dead series is part horror, part comedy,
+                            with Ash Williams (Bruce Campbell) once again battling horrifying demons at a
+                            secluded cabin in the woods. After discovering an audiotape left by a college
+                            professor that contains voices reading from the Book of the Dead, Ash's girlfriendu
+                            Linda (Denise Bixler) becomes possessed by evil spirits that are awakened by the
+                            voices on the tape. Ash soon discovers there is no escaping the woods.
+                            </p>
+                            <span class="fs-4 fw-bolder">
+                                Classification: MA15+<br>
+                                Runtime: 85 minutes<br>
+                                Director: Sam Raimi<br>
+                                Starring: Bruce Campbell, Sarah Berry, Dan Hicks
+                            </span>
+                        </div>
+
+                        <div class="p-3 border rounded border-light">
+                            <h3 class="fw-bolder mb-lg-2">About the venue</h5>
+                            <p class="fs-4 mb-lg-2">
+                            The building, which started life as Pop Picture Palace in the 1920s, was converted
+                            into youth club Teen City in the early 1960s, hosting famous artists like The Bee
+                            Gees and Col Joye. In 1965, it re-opened as the Red Hill Skate Arena, which went
+                            on to become severely damaged by an arsonist-lit fire and closed in 2002.
+                            After this time, the hulking historic remains sat vacant, becoming a canvas for
+                            graffiti artists until it was refurbished by the Souris Brothers in 2019.
+                            </p>
+                            <span class="fs-4 fw-bolder">
+                                Red Hill Cinemas<br>
+                                14 Enoggera Tce<br>
+                                Red Hill<br>
+                                Ph. 3707 5444
+                            </span>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="d-flex flex-column flex-lg-row">
+                        <div class="d-flex flex-column">
+                            <h3 class="fw-bolder">Available times</h3>
+                            <div class="d-flex">
+                                <div class="d-flex my-2">
+                                    <div class="d-flex flex-column mx-1" style="max-width: 150px; width: 150px;">
+                                        <h4 class="fw-bolder">Thursday</h4>
+                                        <span class="border rounded border-light text-center p-2 my-1">09:00</span>
+                                        <span class="border rounded border-light text-center p-2 my-1">12:00</span>
+                                        <span class="border rounded border-light text-center p-2 my-1">16:00</span>
+                                        <span class="border rounded border-light text-center p-2 my-1">20:00</span>
+                                    </div>
+                                    <div class="d-flex flex-column mx-1" style="max-width: 150px; width: 150px;">
+                                        <h4 class="fw-bolder">Friday</h4>
+                                        <span class="border rounded border-light text-center p-2 my-1">09:00</span>
+                                        <span class="border rounded border-light text-center p-2 my-1">12:00</span>
+                                        <span class="border rounded border-light text-center p-2 my-1">16:00</span>
+                                        <span class="border rounded border-light text-center p-2 my-1">20:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column ms-lg-5">
+                            <h3 class="fw-bolder rounded">Your virtual ticket</h4>
+                            <div class="d-flex flex-column flex-lg-row rounded bg-light text-dark p-4" style="max-width: 800px;">
+                                <span id="qrcode"></span>
+                                <div class="d-flex flex-column mx-lg-4 mx-0 my-lg-0 my-2">
+                                    <h4>The Evil Dead</h4>
+                                    <h5 class="text-muted">Red Hill Cinemas</h5>
+                                    <span class="my-1">7rLaHZ99Wm</span>
+                                    <span class="my-1">Showtime: <b>Thursday 24/04 - 20:00</b></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column ms-lg-5 ms-0 my-2">
+                            <h4 class="fw-bolder">Purchase Tickets</h4>
+                            <form>
+                                <div class="form-check my-2">
+                                    <input class="form-check-input" type="radio" name="paymentOptions" id="creditCardOption">
+                                    <label class="form-check-label" for="creditCardOption">
+                                        Credit Card
+                                    </label>
+                                </div>
+                                <div class="form-check my-2">
+                                    <input class="form-check-input" type="radio" name="paymentOptions" id="afterpayOption">
+                                    <label class="form-check-label" for="afterpayOption">
+                                        AfterPay
+                                    </label>
+                                </div>
+                                <div class="form-check my-2">
+                                    <input class="form-check-input" type="radio" name="paymentOptions" id="zipPayOption">
+                                    <label class="form-check-label" for="zipPayOption">
+                                        Zip Pay
+                                    </label>
+                                </div>
+                                <button class="orange-button-no-border zoom p-1 mt-3 fw-bolder">
+                                    Pay now
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="d-flex flex-column mt-3">
+                        <h4 class="fw-bolder">Venue Reviews</h4>
+                        <form>
+                            <textarea class="form-control" id="reviewContent" rows="5" placeholder="Write your review here"></textarea>
+                            <div class="d-flex mt-2">
+                                <input type="radio" name="rating" id="rating-5" class="rating-input" value="5">
+                                <label for="rating-5"><i class="star-icon" data-feather="star"></i></label>
+                                <input type="radio" name="rating" id="rating-4" class="rating-input" value="4">
+                                <label for="rating-4"><i class="star-icon" data-feather="star"></i></label>
+                                <input type="radio" name="rating" id="rating-3" class="rating-input" value="3">
+                                <label for="rating-3"><i class="star-icon" data-feather="star"></i></label>
+                                <input type="radio" name="rating" id="rating-2" class="rating-input" value="2">
+                                <label for="rating-2"><i class="star-icon" data-feather="star"></i></label>
+                                <input type="radio" name="rating" id="rating-1" class="rating-input" value="1">
+                                <label for="rating-1"><i class="star-icon" data-feather="star"></i></label>
+                            </div>
+                            <button class="orange-button-no-border zoom p-1 mt-3 fw-bolder">
+                                Post review
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="d-flex flex-column mt-3">
+                        <h4 class="fw-bolder">@Username</h4>
+                        <h5 class="text-muted mb-0">Posted at 11:14 on 24/04/2023</h5>
+                        <div class="d-flex my-3">
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                        </div>
+                        <p class="border rounded border-light p-3 fs-5">
+                        Hammock letterpress prism dreamcatcher truffaut shabby chic vice
+                        cold-pressed. Franzen pug fashion axe before they sold out, tumblr irony
+                        kogi actually af bushwick banh mi. Snackwave bicycle rights tofu
+                        dreamcatcher tote bag pour-over meditation raw denim fanny pack.
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column mt-3">
+                        <h4 class="fw-bolder">@Username</h4>
+                        <h5 class="text-muted mb-0">Posted at 11:14 on 24/04/2023</h5>
+                        <div class="d-flex my-3">
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                        </div>
+                        <p class="border rounded border-light p-3 fs-5">
+                        Hammock letterpress prism dreamcatcher truffaut shabby chic vice
+                        cold-pressed. Franzen pug fashion axe before they sold out, tumblr irony
+                        kogi actually af bushwick banh mi. Snackwave bicycle rights tofu
+                        dreamcatcher tote bag pour-over meditation raw denim fanny pack.
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column mt-3">
+                        <h4 class="fw-bolder">@Username</h4>
+                        <h5 class="text-muted mb-0">Posted at 11:14 on 24/04/2023</h5>
+                        <div class="d-flex my-3">
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                        </div>
+                        <p class="border rounded border-light p-3 fs-5">
+                        Hammock letterpress prism dreamcatcher truffaut shabby chic vice
+                        cold-pressed. Franzen pug fashion axe before they sold out, tumblr irony
+                        kogi actually af bushwick banh mi. Snackwave bicycle rights tofu
+                        dreamcatcher tote bag pour-over meditation raw denim fanny pack.
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column mt-3">
+                        <h4 class="fw-bolder">@Username</h4>
+                        <h5 class="text-muted mb-0">Posted at 11:14 on 24/04/2023</h5>
+                        <div class="d-flex my-3">
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                        </div>
+                        <p class="border rounded border-light p-3 fs-5">
+                        Hammock letterpress prism dreamcatcher truffaut shabby chic vice
+                        cold-pressed. Franzen pug fashion axe before they sold out, tumblr irony
+                        kogi actually af bushwick banh mi. Snackwave bicycle rights tofu
+                        dreamcatcher tote bag pour-over meditation raw denim fanny pack.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
 
+<script>
+    feather.replace();
+
+    var qrcode = new QRCode("qrcode",
+        "7rLaHZ99Wm");
+</script>

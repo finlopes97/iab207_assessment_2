@@ -23,15 +23,23 @@
                 </li>
                 <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
                     <a class="sidebar-link sidebar-item-fade" href="profile.html">
-                        <img class="rounded-circle mx-auto" alt="avatar" src="img/avatar.jpg">
+                        <img class="rounded-circle mx-auto" alt="avatar" src="img/avatar_blank.jpg">
                     </a>
                 </li>
+                <li class="sidebar-item-user-options sidebar-item-centered focus-only focus-visible-only">
+                    <span>
+                        <a class="sidebar-link sidebar-item-fade" href="profile.html">Log in</a>
+                        or
+                        <a class="sidebar-link sidebar-item-fade" href="profile.html">Sign up</a>
+                    </span>
+                </li>
                 <li class="sidebar-list-item sidebar-item-search focus-only focus-visible-only">
-                    <form action="#" class="d-inline-flex flex-0 align-items-center">
-                        <input class="sidebar-item-search-bar" type="text" placeholder="Find showings..." name="search">
-                        <button class="sidebar-item-button sidebar-item-fade">
+                    <form class="d-inline-flex flex-0 align-items-center" action="browse.html" method="get">
+                        <input class="sidebar-item-search-bar" type="text" placeholder="Find showings..." name="searchTerm">
+                        <button class="sidebar-item-button sidebar-item-fade" type="submit">
                             <i data-feather="search"></i>
                         </button>
+                        <input type="hidden" name="redirect" value="true">
                     </form>
                 </li>
                 <li class="sidebar-list-item focus-only focus-visible-only">
@@ -46,15 +54,26 @@
                         <span class="sidebar-item-text">News</span>
                     </a>
                 </li>
+                <li class="sidebar-list-item sidebar-item-footer zoom">
+                    <a class="orange-button-no-border p-3 mx-auto" href="create_event.html">
+                        Create a showing
+                    </a>
+                </li>
             </ul>
         </nav>
 
         <main>
 
-            <div class="mobile-title">
-                <span class="d-flex justify-content-center">
-                    <i data-feather="film" class="mb-1 me-2" style="width: 2.5rem; height: auto;"></i>
-                    <h1 class="display-1 text-uppercase">Home</h1>
+            <div class="ghost-button shadow-lg zoom">
+                <a class="orange-button-no-border p-1" href="create_event.html">
+                    Create a showing
+                </a>
+            </div>
+
+            <div class="mobile-page-title">
+                <span class="d-flex justify-content-center mb-4">
+                    <i data-feather="film" class="mb-1 me-2" style="width: 40px; height: auto;"></i>
+                    <h1 class="display-1 text-uppercase">Letterboxer</h1>
                 </span>
             </div>
 
@@ -67,13 +86,13 @@
 </html>
 
 <template id="cardTemplate">
-    <a href="#" class="card border-0 shadow-lg zoom text-decoration-none" style="width: auto;">
+    <a href="#" id="link" class="card border-0 shadow-lg zoom text-decoration-none" style="width: auto;">
         <img src="" class="card-img-top" alt="movie poster">
         <div class="card-body">
             <h5 class="card-title text-dark fw-bold"></h5>
             <h6 class="card-subtitle text-secondary"></h6>
             <p class="card-text text-dark mt-2"></p>
-            <span class="badge badge-light rounded-pill bg-dark mt-2"></span>
+            <span class="badge badge-light rounded-pill bg-dark mb-2 position-absolute bottom-0"></span>
         </div>
     </a>
 </template>
@@ -85,6 +104,7 @@
     const container = document.getElementById("cardContainer");
     const cardData = [
         { 
+            href: "event_details.html",
             img: "img/jurassic.jpg",
             title: "Jurrassic Park",
             venue: "United Eldorado Cinemas",
@@ -92,10 +112,11 @@
             description: `A pragmatic paleontologist touring an almost complete theme park 
             on an island in Central America is tasked with protecting a couple of kids 
             after a power failure causes the park's cloned dinosaurs to run loose.`,
-            status: "Active"
+            status: "Cancelled"
         },
             
         { 
+            href: "event_details.html",
             img: "img/pulp.jpg",
             title: "Pulp Fiction",
             venue: "Elizabeth Street Picture Theatre",
@@ -105,6 +126,7 @@
             status: "Inactive"
         },
         { 
+            href: "event_details.html",
             img: "img/freddy.jpg",
             title: "Freddy vs Jason",
             venue: "Yatala Drive-In",
@@ -114,19 +136,21 @@
             status: "Sold out"
         },
         {
+            href: "event_details.html",
             img: "img/evildead.jpg",
             title: "Evil Dead 2",
             venue: "Red Hill Cinema",
             area: "Red Hill",
             description: `The lone survivor of an onslaught of flesh-possessing spirits holes up in a 
             cabin with a group of strangers while the demons continue their attack.`,
-            status: "Cancelled"
+            status: "Active"
         }
     ];
 
     cardData.forEach(data => { 
         const card = template.content.cloneNode(true);
 
+        card.getElementById("link").setAttribute("href", data.href);
         card.querySelector(".card-img-top").setAttribute("src", data.img);
         card.querySelector(".card-title").textContent = data.title;
         card.querySelector(".card-subtitle").textContent = `${data.venue}, ${data.area}`;

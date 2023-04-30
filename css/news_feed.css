@@ -6,12 +6,51 @@
     flex-direction: column;
     align-items: start;
     width: 100%;
-    margin: 1rem 0;
-    padding: 0;
+    margin: 16px 0px;
+    padding: 0px;
 }
 
 .news-feed-item {
     display: flex;
     flex: 0;
-    margin: 2rem auto;
+    font-size: 24px;
+    margin: 32px auto;
 }
+
+.news-feed-item hr {
+    display: none;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .news-feed {
+        margin: auto;
+        align-items: center;
+    }
+    .news-feed-item {
+        flex-direction: column;
+        margin: 32px auto;
+    }
+    .news-feed-item img {
+        margin-bottom: 16px;
+    }
+    .news-feed-item hr {
+        display: block;
+    }
+}
+
+/* For all the sicko freaks who use their phones in landscape mode */
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+    .news-feed-item {
+        font-size: 14px !important;
+    }
+    .news-feed-item h2 {
+        font-size: 20px;
+    }
+    .news-feed-item img {
+        width: 200px;
+        height: auto;
+        margin: 0;
+    }
+}
+

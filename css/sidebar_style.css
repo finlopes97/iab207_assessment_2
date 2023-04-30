@@ -14,7 +14,7 @@
 /* --------------------------------------------------------------------------- */
 .sidebar-list {
     list-style: none;
-    padding: 0rem 0.5rem;
+    padding: 0 8px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -26,10 +26,18 @@
 /* --------------------------------------------------------------------------- */
 .sidebar-list-item {
     font-size: 36px;
-    margin: 2rem 0 2rem 1rem;
+    margin: 32px 0 32px 16px;
     flex: 0;
 }
 
+.sidebar-item-user-options {
+    font-size: 28px;
+}
+
+.sidebar-item-footer {
+    margin: auto auto 64px auto;
+    bottom: 0;
+}
 
 .sidebar-item-text {
     display: inline;
@@ -40,7 +48,7 @@
 
 /* Fix the alignment of the svg icons, truly a fix of all time */
 .sidebar-list-item svg {
-    margin-bottom: 0.5rem;
+    margin-bottom: 4px;
 }
 
 /* Make links look better */
@@ -52,6 +60,7 @@
 /* --------------------------------------------------------------------------- */
 .sidebar-item-fade {
     filter: grayscale(100%) opacity(0.9);
+    color: var(--accent-orange);
     transition: var(--transition-speed);
 }
 
@@ -67,20 +76,20 @@
 }
 
 .sidebar-item-search-bar {
-    width: 12rem;
-    height: 3rem;
+    width: 200px;
+    height: 40px;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 22px;
     color: var(--off-white);
     background-color: var(--dark);
     border: 2px solid var(--off-white);
-    padding: 0.75rem;
+    padding: 12px;
 }
 
 .sidebar-item-button {
     background: none;
     color: inherit;
-    margin-left: 0.5rem;
+    margin-left: 8px;
     border: hidden;
 }
 
@@ -102,7 +111,7 @@
     .sidebar {
         bottom: 0;
         width: 100vw;
-        height: 4rem;
+        height: 64px;
     }
     .sidebar-list {
         flex-direction: row;
@@ -112,7 +121,9 @@
         margin: auto;
     }
     .sidebar-item-search,
-    .sidebar-item-text {
+    .sidebar-item-user-options,
+    .sidebar-item-text,
+    .sidebar-item-footer {
         display: none;
     }
     .sidebar-list-item img {
@@ -123,16 +134,21 @@
 
 /* For all the sicko freaks who use their phones in landscape mode */
 @media only screen and (min-width: 700px) and (max-width: 900px) {
+    .sidebar {
+        width: 220px;
+    }
+    .sidebar-item-search-bar {
+        font-size: 16px;
+        width: 160px;
+        height: 20px;
+    }
     .sidebar-list-item {
-        margin: 0.5rem auto;
-        font-size: 24px;
+        margin: 14px auto;
+        font-size: 16px;
     }
     .sidebar-list-item img {
         width: 64px;
         height: 64px;
-    }
-    .sidebar-item-centered {
-        margin: 2rem auto;
     }
 }
 
@@ -143,6 +159,6 @@
         height: 192px;
     }
     .sidebar-item-centered {
-        margin: 2rem auto;
+        margin: 32px auto;
     }
 }

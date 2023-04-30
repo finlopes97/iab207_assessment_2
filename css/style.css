@@ -40,7 +40,11 @@ main {
 }
 
 /* Ensuring the title is visible on mobile, as the sidebar turns into a bottom navbar */
-.mobile-title {
+.mobile-page-title {
+    display: none;
+}
+
+.ghost-button {
     display: none;
 }
 
@@ -54,17 +58,44 @@ main {
     transition: 100ms;
 }
 
+.orange-button-no-border,
+.orange-button-no-border:hover {
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: var(--accent-orange);
+    color: var(--dark);
+    border-radius: 4px;
+    border: none;
+    max-width: 200px;
+    text-decoration: none;
+}
+
+.form-filled-glow {
+    /* border: 2px solid var(--accent-orange); */
+    box-shadow: 0 0 8px 4px var(--accent-orange);
+}
+.form-filled-glow:placeholder-shown {
+    /* border: none; */
+    box-shadow: none;
+}
+
 @media only screen and (max-width: 700px) {
     main {
         margin-left: 0;
         margin-bottom: 4rem;
     }
 
-    .mobile-title {
+    .mobile-page-title {
         display: block;
         /* color: var(--off-white); */
     }
-
+    .ghost-button {
+        position: fixed;
+        bottom: 80px;
+        left: 20px;
+        display: block;
+        z-index: 10;
+    }
     body {
         scrollbar-width: none;
     }
@@ -76,3 +107,8 @@ main {
     }
 }
 
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+    main {
+        margin-left: 220px;
+    }
+}

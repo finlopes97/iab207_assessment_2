@@ -1,0 +1,8 @@
+.rating-input {
+    display: none;
+}
+.rating-input:checked + label .star-icon {
+    color: var(--accent-orange);
+    -webkit-filter: drop-shadow(0 0 4px var(--accent-orange));
+    filter: drop-shadow(0 0 4px var(--accent-orange));
+}

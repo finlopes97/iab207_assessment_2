@@ -9,10 +9,110 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/sidebar_style.css">
-        <link rel="stylesheet" href="css/landing_grid.css">
     </head>
     <body>
-        <h1>This is the profile page</h1>
+        
+        <nav class="sidebar">
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="index.html">
+                        <i data-feather="film"></i>
+                        <span class="sidebar-item-text">Letterboxer</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="profile.html">
+                        <img class="rounded-circle mx-auto" alt="avatar" src="img/avatar_blank.jpg">
+                    </a>
+                </li>
+                <li class="sidebar-item-user-options sidebar-item-centered focus-only focus-visible-only">
+                    <span>
+                        <a class="sidebar-link sidebar-item-fade" href="profile.html">Log in</a>
+                        or
+                        <a class="sidebar-link sidebar-item-fade" href="profile.html">Sign up</a>
+                    </span>
+                </li>
+                <li class="sidebar-list-item sidebar-item-search focus-only focus-visible-only">
+                    <form class="d-inline-flex flex-0 align-items-center" action="browse.html" method="get">
+                        <input class="sidebar-item-search-bar" type="text" placeholder="Find showings..." name="searchTerm">
+                        <button class="sidebar-item-button sidebar-item-fade" type="submit">
+                            <i data-feather="search"></i>
+                        </button>
+                        <input type="hidden" name="redirect" value="true">
+                    </form>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="browse.html">
+                        <i data-feather="tag"></i>
+                        <span class="sidebar-item-text">What's on</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="news.html">
+                        <i data-feather="paperclip"></i>
+                        <span class="sidebar-item-text">News</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item sidebar-item-footer zoom">
+                    <a class="orange-button-no-border p-3 mx-auto" href="create_event.html">
+                        Create a showing
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <div class="ghost-button shadow-lg zoom">
+                <a class="orange-button-no-border p-1" href="create_event.html">
+                    Create a showing
+                </a>
+            </div>
+
+            <h1 class="display-1">Sign up</h1>
+            <form class="d-flex flex-column justify-content-center mx-0 mx-lg-5 p-0 p-lg-5">
+                <div class="row my-3">
+                    <div class="col">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control form-control-lg" aria-label="First name" id="firstName">
+                    </div>
+                    <div class="col">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control form-control-lg" aria-label="Last name" id="lastName">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col">
+                        <label for="mobileNumber" class="form-label">Mobile Number</label>
+                        <input type="text" class="form-control form-control-lg" aria-label="Mobile Number" id="mobileNumber">
+                    </div>
+                    <div class="col">
+                        <label for="postCode" class="form-label">Postcode</label>
+                        <input type="text" class="form-control form-control-lg" aria-label="Postcode" id="postCode">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col">
+                        <label for="emailInput" class="form-label">Email</label>
+                        <input type="email" class="form-control form-control-lg" aria-label="Email" id="emailInput">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col">
+                        <label for="passwordInput" class="form-label">Password</label>
+                        <input type="password" class="form-control form-control-lg" aria-label="Password" id="passwordInput">
+                    </div>
+                </div>
+                <button class="orange-button-no-border zoom my-3 p-1">
+                    Join now!
+                </button>
+            </form>
+
+        </main>
+
     </body>
 </html>
 
+<script>
+    feather.replace();
+</script>

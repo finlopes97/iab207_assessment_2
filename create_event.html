@@ -9,10 +9,291 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/sidebar_style.css">
-        <link rel="stylesheet" href="css/landing_grid.css">
     </head>
     <body>
-        <h1>This page is used to create events</h1>
+        
+        <nav class="sidebar">
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="index.html">
+                        <i data-feather="film"></i>
+                        <span class="sidebar-item-text">Letterboxer</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="profile.html">
+                        <img class="rounded-circle mx-auto" alt="avatar" src="img/avatar_blank.jpg">
+                    </a>
+                </li>
+                <li class="sidebar-item-user-options sidebar-item-centered focus-only focus-visible-only">
+                    <span>
+                        <a class="sidebar-link sidebar-item-fade" href="profile.html">Log in</a>
+                        or
+                        <a class="sidebar-link sidebar-item-fade" href="profile.html">Sign up</a>
+                    </span>
+                </li>
+                <li class="sidebar-list-item sidebar-item-search focus-only focus-visible-only">
+                    <form class="d-inline-flex flex-0 align-items-center" action="browse.html" method="get">
+                        <input class="sidebar-item-search-bar" type="text" placeholder="Find showings..." name="searchTerm">
+                        <button class="sidebar-item-button sidebar-item-fade" type="submit">
+                            <i data-feather="search"></i>
+                        </button>
+                        <input type="hidden" name="redirect" value="true">
+                    </form>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="browse.html">
+                        <i data-feather="tag"></i>
+                        <span class="sidebar-item-text">What's on</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="news.html">
+                        <i data-feather="paperclip"></i>
+                        <span class="sidebar-item-text">News</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item sidebar-item-footer zoom">
+                    <a class="orange-button-no-border p-3 mx-auto" href="create_event.html">
+                        Create a showing
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section>
+                <h1 class="display-2">Create an event</h1>
+                <form>
+                    <div class="d-flex flex-column">
+                        <h3 class="mb-3">Venue details</h3>
+                        <div class="mb-3 ms-lg-4">
+                            <label for="venueName" class="form-label">Venue name</label>
+                            <input type="text" class="form-control" id="venueName" placeholder="Enter venue name">
+                        </div>
+                        <div class="mb-3 ms-lg-4">
+                            <label for="address" class="form-label">Address</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="address" placeholder="Enter address">
+                                <button class="btn btn-outline-secondary" type="button">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row">
+                        <div class="d-flex flex-column ms-lg-4">
+                            <h3>Accessibility</h3>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="wheelchairAccess">
+                                    <label class="form-check-label" for="wheelchairAccess">
+                                        Wheelchair access
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="closedCaptions">
+                                    <label class="form-check-label" for="closedCaptions">
+                                        Closed captions
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="infraRedHearing">
+                                    <label class="form-check-label" for="infraRedHearing">
+                                        Infra-red hearing
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="audioDescription">
+                                    <label class="form-check-label" for="audioDescription">
+                                        Audio description
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="sensoryScreening">
+                                    <label class="form-check-label" for="sensoryScreening">
+                                        Sensory screening
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column ms-lg-4">
+                            <h3>Dietary</h3>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="vegetarian">
+                                    <label class="form-check-label" for="vegetarian">
+                                        Vegetarian
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="vegan">
+                                    <label class="form-check-label" for="vegan">
+                                        Vegan
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="glutenFree">
+                                    <label class="form-check-label" for="glutenFree">
+                                        Gluten-free
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="alcohol">
+                                    <label class="form-check-label" for="alcohol">
+                                        Alcohol
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="otherDietary">
+                                    <label class="form-check-label" for="otherDietary">
+                                        Other:
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="otherDietaryInput" placeholder="Enter other dietary options">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column ms-lg-4">
+                            <h3>Seating</h3>
+                            <div class="mb-3">
+                                <label for="seatsAvailable" class="form-label">Seats available</label>
+                                <input type="number" class="form-control" id="seatsAvailable" placeholder="Enter number of seats available">
+                            </div>
+                            <div class="d-flex">
+                                <div class="d-flex flex-column mb-3">
+                                    <label for="reclinersAvailable" class="form-label">Recliners available</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="reclinersAvailable" id="reclinersYes" value="Yes">
+                                        <label class="form-check-label" for="reclinersYes">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="reclinersAvailable" id="reclinersNo" value="No">
+                                        <label class="form-check-label" for="reclinersNo">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column mb-3 ms-2">
+                                    <label for="wideSeatingAvailable" class="form-label">Wide seating available</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="wideSeatingAvailable" id="wideSeatingYes" value="Yes">
+                                        <label class="form-check-label" for="wideSeatingYes">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="wideSeatingAvailable" id="wideSeatingNo" value="No">
+                                        <label class="form-check-label" for="wideSeatingNo">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mb-3">Event details</h3>
+                    <div class="d-flex flex-column flex-lg-row">
+                        <div class="d-flex flex-column ms-lg-4 mb-3" style="max-width: 500px; width: 100%;">
+                            <div class="mb-3">
+                                <label for="movieTitle" class="form-label">Movie title</label>
+                                <input type="text" class="form-control" id="movieTitle" placeholder="Enter title of movie">
+                            </div>
+                            <div class="mb-3">
+                                <label for="shortDesc" class="form-label">Short description</label>
+                                <textarea type="text" class="form-control" id="shortDesc" rows="3" placeholder="Please write a short description"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="longDesc" class="form-label">Long description</label>
+                                <textarea type="text" class="form-control" id="longDesc" rows="6" placeholder="Please write a longer description, include details about the film and venue"></textarea>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column ms-lg-4 mb-3" style="max-width: 300px; width: 100%;">
+                            <div class="mb-3">
+                                <label for="classification" class="form-label">Classification</label>
+                                <select class="form-select" id="genreSelect">
+                                    <option value="1" selected>General (G)</option>
+                                    <option value="2">Parental Guidance (PG)</option>
+                                    <option value="3">Mature (M)</option>
+                                    <option value="4">Mature Accompanied (MA15+)</option>
+                                    <option value="5">Restricted (R)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="classification" class="form-label">Classification</label>
+                                <select class="form-select" id="genreSelect">
+                                    <option value="1" selected>Action</option>
+                                    <option value="2">Comedy</option>
+                                    <option value="3">Horror</option>
+                                    <option value="4">Science-Fiction</option>
+                                    <option value="5">Fantasy</option>
+                                    <option value="6">Romance</option>
+                                    <option value="7">Drama</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="runtime" class="form-label">Runtime</label>
+                                <input type="text" class="form-control" id="runtime" placeholder="Time in minutes">
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventThumbnail" class="form-label">Thumbnail for listing</label>
+                                <input class="form-control" type="file" id="eventThumbnail">
+                                <button type="button" class="orange-button-no-border zoom p-1 mt-2">Upload...</button>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column ms-lg-4 mb-3" style="max-width: 500px; width: 100%;">
+                            <div class="mb-3">
+                                <label for="startDate" class="form-label">Start Date</label>
+                                <input type="date" class="form-control" id="startDate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="endDate" class="form-label">End Date</label>
+                                <input type="date" class="form-control" id="endDate">
+                            </div>
+                            <div class="mb-0">
+                                <table class="table table-hover table-responsive table-light">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Time</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>04/04/2023</td>
+                                            <td>11:00</td>
+                                            <td>Booked</td>
+                                        </tr>
+                                        <tr>
+                                            <td>04/04/2023</td>
+                                            <td>16:00</td>
+                                            <td>Booked</td>
+                                        </tr>
+                                        <tr>
+                                            <td>05/04/2023</td>
+                                            <td>20:00</td>
+                                            <td>20 seats remaining</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button type="button" class="orange-button-no-border zoom p-2 mx-auto" style="width: 100%;">Add showing</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="d-flex">
+                        <button type="button" class="orange-button-no-border zoom p-2" style="width: 100px;">Save</button>
+                        <button type="button" class="orange-button-no-border zoom p-2 ms-4" style="width: 100px;">Cancel</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
     </body>
 </html>
 
+<script>
+    feather.replace();
+</script>

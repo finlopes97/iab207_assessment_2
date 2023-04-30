@@ -9,9 +9,208 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/sidebar_style.css">
-        <link rel="stylesheet" href="css/landing_grid.css">
     </head>
     <body>
-        <h1>This is the browsing page</h1>
+        
+        <nav class="sidebar">
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="index.html">
+                        <i data-feather="film"></i>
+                        <span class="sidebar-item-text">Letterboxer</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item sidebar-item-centered focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="profile.html">
+                        <img class="rounded-circle mx-auto" alt="avatar" src="img/avatar_blank.jpg">
+                    </a>
+                </li>
+                <li class="sidebar-item-user-options sidebar-item-centered focus-only focus-visible-only">
+                    <span>
+                        <a class="sidebar-link sidebar-item-fade" href="profile.html">Log in</a>
+                        or
+                        <a class="sidebar-link sidebar-item-fade" href="profile.html">Sign up</a>
+                    </span>
+                </li>
+                <li class="sidebar-list-item sidebar-item-search focus-only focus-visible-only">
+                    <form class="d-inline-flex flex-0 align-items-center" action="browse.html" method="get">
+                        <input class="sidebar-item-search-bar" type="text" placeholder="Find showings..." name="searchTerm">
+                        <button class="sidebar-item-button sidebar-item-fade" type="submit">
+                            <i data-feather="search"></i>
+                        </button>
+                        <input type="hidden" name="redirect" value="true">
+                    </form>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="browse.html">
+                        <i data-feather="tag"></i>
+                        <span class="sidebar-item-text">What's on</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item focus-only focus-visible-only">
+                    <a class="sidebar-link sidebar-item-fade" href="news.html">
+                        <i data-feather="paperclip"></i>
+                        <span class="sidebar-item-text">News</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item sidebar-item-footer zoom">
+                    <a class="orange-button-no-border p-3 mx-auto" href="create_event.html">
+                        Create a showing
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <div class="ghost-button shadow-lg zoom">
+                <a class="orange-button-no-border p-1" href="create_event.html">
+                    Create a showing
+                </a>
+            </div>
+
+            <section>
+                <h1 class="display-1">What's On</h1>
+                <hr />
+                <h3 class="fw-bolder text-uppercase">Filters</h3>
+                <div class="d-flex flex-column flex-sm-row">
+                    <span>
+                        <div class="m-3">
+                            <h5>Genre</h5>
+                            <select class="form-select" id="genreSelect">
+                                <option selected>Any</option>
+                                <option value="1">Action</option>
+                                <option value="2">Comedy</option>
+                                <option value="3">Horror</option>
+                                <option value="4">Science-Fiction</option>
+                                <option value="5">Fantasy</option>
+                                <option value="6">Romance</option>
+                                <option value="7">Drama</option>
+                            </select>
+                        </div>
+
+                        <div class="m-3">
+                            <h5>Classification</h5>
+                            <div class="d-flex">
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="classification_G">
+                                    <label class="form-check-label" for="classification_G">
+                                        G (General)
+                                    </label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="classification_PG">
+                                    <label class="form-check-label" for="classification_PG">
+                                        PG (Parental Guidance)
+                                    </label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="classification_M">
+                                    <label class="form-check-label" for="classification_M">
+                                        M (Mature)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="classification_MA">
+                                    <label class="form-check-label" for="classification_MA">
+                                        MA 15+ (Mature Accompanied)
+                                    </label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="classification_R">
+                                    <label class="form-check-label" for="classification_R">
+                                        R 18+ (Restricted
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+
+                    <span>
+                        <div class="m-3">
+                            <h5>Date Range</h5>
+                            <div>
+                                <label for="startDate" class="form-label my-2">Start Date</label>
+                                <input type="date" class="form-control" id="startDate">
+
+                                <label for="endDate" class="form-label my-2">End Date</label>
+                                <input type="date" class="form-control" id="endDate">
+                            </div>
+                        </div>
+                    </span>
+
+                    <span>
+                        <div class="m-3">
+                            <h5>Venue</h5>
+                            <input class="form-control mt-2" list="venues" id="venueDataList" placeholder="Search... (try 'yat' or 'el')">
+                            <datalist id="venues">
+                                <option value="United Eldorado">
+                                <option value="Elizabeth Street Picture Theatre">
+                                <option value="Yatala Drive-In">
+                                <option value="Red Hill Cinemas">
+                            </datalist>
+                        </div>
+
+                        <div class="m-3">
+                            <h5>Title</h5>
+                            <input class="form-control mt-2 form-filled-glow" id="movieTitle" placeholder="Enter a movie title...">
+                        </div>
+                    </span>
+                    
+                </div>
+            </section>
+
+            <hr />
+
+            <section>
+                <h3 class="fw-bolder text-uppercase">Movies</h3>
+                <div class="d-flex flex-column my-4">
+                    <div class="d-flex flex-column flex-sm-row my-3">
+                        <img src="img/evildead_banner.jpg" class="flex-0 rounded shadow-lg" style="max-width: 400px; height: auto;">
+                        <span class="d-flex flex-column justify-content-center ms-0 ms-lg-3 my-2 my-lg-0 border border-2 border-light rounded p-4" style="max-width: 300px; width: 100%;">
+                            <h4 class="text-uppercase">Evil Dead II</h4>
+                            <h5 class="text-muted">Red Hill Cinemas, Red Hill</h5>
+                        </span>
+                        <span class="d-flex flex-column justify-content-center ms-0 ms-lg-3 my-2 my-lg-0 border border-2 border-light rounded p-4">
+                            <h4 class="text-uppercase">Dead by Dawn!</h4>
+                            <h5 class="text-muted">The following is a description from the event owner</h5>
+                            <p>
+                            Relive the nightmare of Sam Raimi's horror comedy classic as Ash fights for survival
+                            against otherworldly demons. Chainsaws, shotguns and tonnes of blood. Groovy.
+                            For a limited run, watch this movie on the bigscreen at the Red Hill Cinemas.
+                            Sink into our comfy reclining seats and enjoy a cheeky drink or hot cup of
+                            coffee. Who's laughing now.
+                            </p>
+                            <div class="d-flex">
+                                <a class="orange-button-no-border zoom p-1" href="event_details.html">
+                                    See Event Details...
+                                </a>
+                                <span class="badge rounded-pill bg-light text-dark text-uppercase my-auto ms-3 me-auto">Active</span>
+                            </div>
+                        </span>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row my-3">
+                        <h2>Imagine more movies here, wouldn't it be a sight for sore eyes</h2>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
     </body>
 </html>
+
+<script>
+    feather.replace();
+
+    // Get the search term from the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchTerm = urlParams.get('searchTerm');
+
+    // Pre-populate the search bar with the search term
+    const searchInput = document.querySelector('#movieTitle');
+    searchInput.value = searchTerm;
+</script>
